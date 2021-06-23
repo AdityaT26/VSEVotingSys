@@ -1,0 +1,276 @@
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+    @charset "ISO-8859-1";
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      /*background: #34495e;*/
+      background-color:#b2d3e9;
+      transition : 0.25s;
+    }
+
+    @keyframes logo{
+      0% {color : #7edd6a; padding : 54px 20px;}
+      5% {color : #99beee; padding : 54px 30px;}
+      10% {color : #7edd6a; padding : 54px 20px;}
+      20% {color : #99beee; padding : 54px 30px;}
+      30% {color : #7edd6a; padding : 54px 20px;}
+      40% {color : #99beee; padding : 54px 30px;}
+      50% {color : #7edd6a; padding : 54px 20px;}
+      60% {color : #99beee; padding : 54px 30px;}
+      70% {color : #7edd6a; padding : 54px 20px;}
+      80% {color : #99beee; padding : 54px 30px;}
+      90% {color : #7edd6a; padding : 54px 20px;}
+      95% {color : #99beee; padding : 54px 30px;}
+      95% {color : #7edd6a; padding : 54px 20px;}
+    }
+
+    @keyframes border{
+      0%{border : 5px solid #4285F4; box-shadow: 0 0 10px #4285F4;}
+      25%{border : 5px solid #1de452; box-shadow: 0 0 20px #1de452;}
+      50%{border : 5px solid #FBBC05; box-shadow: 0 0 10px #FBBC05;}
+      75%{border : 5px solid #fa1c08; box-shadow: 0 0 20px #fa1c08;}
+      100%{border : 5px solid #4285F4; box-shadow: 0 0 10px #4285F4;}
+    }
+
+    .banner{
+      /*background-color : #030536;*/
+      width : 300px;
+      padding : 40px;
+      color : #7edd6a;
+      display : block;
+      margin : 20px auto;
+      text-align : center;
+      padding : 54px 20px;
+      font-weight : 400;
+      font-size : 50;
+      text-shadow: 0 0 3px #013f09, 0 0 5px #056279;
+    }
+
+    .banner:hover{
+      /*border : 2px solid #ffbf00;
+      border-radius : 24px;*/
+      animation: logo 10s infinite;
+    }
+
+    .oauth{
+
+      width : 300px;
+      height : 300px;
+      padding : 20px;
+      position : absolute;
+
+      top : 50%;
+      left : 70%;
+
+      transform: translate(-50%, -40%);
+      text-align: center;
+      background: #191919;
+
+      border : 2px solid #3498db;
+      box-shadow: 0 0 10px #4285F4;
+      border-radius : 24px;
+    }
+
+    .oauthadmin{
+
+        width : 300px;
+        height : 300px;
+        padding : 20px;
+        position : absolute;
+
+        top : 50%;
+        left : 30%;
+
+        transform: translate(-50%, -40%);
+        text-align: center;
+        background: #191919;
+
+        border : 2px solid #3498db;
+        box-shadow: 0 0 10px #4285F4;
+        border-radius : 24px;
+    }
+
+    @keyframes fadeout{
+      0% {
+        background-size: 100%;
+      }
+      80% {
+          background-size: 650%;
+      }
+      100% {
+          background-size: 650%;
+      }
+    }
+
+    @keyframes fadein{
+      0% {
+        background-size: 650%;
+      }
+      40% {
+          background-size: 650%;
+      }
+      100% {
+          background-size: 100%;
+      }
+    }
+
+    .oauth a{
+
+      text-align: center;
+      display : block;
+      padding: 10px;
+      border-radius : 24px;
+
+      font-weight: bold;
+
+      position : absolute;
+      transform: translate(120%, 270%);
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 25px;
+
+      background-image: linear-gradient(
+        45deg,
+      #4285F4 33%, 
+      #1de452 33%, 
+      #1de452 53%, 
+      #FBBC05 53%,
+      #FBBC05 75%, 
+      #EA4335 75%, 
+      #EA4335 90%,
+      #fa1c08 90%
+      );
+
+      animation: fadein 0.75s ease forwards;
+
+    }
+
+    .oauth:hover{
+      animation: border 5s infinite;
+    }
+
+    .oauth a:hover{
+      animation: fadeout 0.5s ease-in forwards;
+    }
+
+    .oauth p{
+
+      color: white;
+      font-size: 30px;
+    }
+
+    .oauthadmin a{
+
+        text-align: center;
+        display : block;
+        padding: 20px;
+        border-radius : 24px;
+
+        font-weight: bold;
+
+        position : absolute;
+        transform: translate(8%, 10%);
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 25px;
+
+        background-image: linear-gradient(
+        45deg,
+        #4285F4 33%, 
+        #1de452 33%, 
+        #1de452 53%, 
+        #FBBC05 53%,
+        #FBBC05 75%, 
+        #EA4335 75%, 
+        #EA4335 90%,
+        #fa1c08 90%
+        );
+
+        animation: fadein 0.75s ease forwards;
+
+    }
+
+    .oauthadmin:hover{
+      animation: border 5s infinite;
+    }
+
+    .oauthadmin a:hover{
+      animation: fadeout 0.5s ease-in forwards;
+    }
+
+    .oauthadmin p{
+
+      color: white;
+      font-size: 30px;
+    }
+
+    .oauthadmin a{
+
+        text-align: center;
+      display : block;
+      padding: 10px;
+      border-radius : 24px;
+
+      font-weight: bold;
+
+      position : absolute;
+      transform: translate(120%, 270%);
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 25px;
+
+      background-image: linear-gradient(
+        45deg,
+      #4285F4 33%, 
+      #1de452 33%, 
+      #1de452 53%, 
+      #FBBC05 53%,
+      #FBBC05 75%, 
+      #EA4335 75%, 
+      #EA4335 90%,
+      #fa1c08 90%
+      );
+
+      animation: fadein 0.75s ease forwards;
+
+    }
+
+    </style>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+
+    <h1 class="banner">
+      <u>VSE Council</u>
+    </h1>
+
+    <!--<form class="_ex1" action="../home/" method="get">--->
+
+    <div class='oauth'>
+
+      <p>User Login</p>
+
+      <a>Login</a><br>
+
+    </div>
+
+    <div class='oauthadmin'>
+
+        <p>Admin Login</p>
+  
+        <a>Login</a><br>
+  
+      </div>
+
+  </body>
+</html>

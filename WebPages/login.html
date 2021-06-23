@@ -1,0 +1,225 @@
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+    @charset "ISO-8859-1";
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      /*background: #34495e;*/
+      background-image : url("urLib.png");
+      transition : 0.25s;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    ._admin{
+      width : 300px;
+      padding : 30px;
+      position : absolute;
+
+      top : 50%;
+      left : 50%;
+
+      transform: translate(-120%, -40%);
+      text-align: center;
+      background: #303536;
+
+      border : 2px solid #3498db;
+      border-radius : 24px;
+    }
+
+    ._admin:hover{
+      /*border-color : #9000ff;*/
+      border : 4px solid #27da63;
+    }
+
+    ._admin h1{
+      color : white;
+      font-weight : 400;
+      text-transform: uppercase;
+    }
+
+    ._admin h3{
+      color : white;
+      font-weight : 400;
+      text-transform: uppercase;
+    }
+
+    ._admin input[type = "text"], ._admin input[type = "password"]{
+      border : 0;
+      background : none;
+      display : block;
+      margin : 20px auto;
+      text-align : center;
+      color : white;
+      border : 2px solid #3498db;
+      padding : 14px 10px;
+      width : 200px;
+      outline : none;
+      border-radius : 24px;
+      transition : 0.25s;
+    }
+
+    ._admin input[type = "text"]:focus, ._admin input[type = "password"]:focus{
+      width : 220px;
+      border-color : #27da63;
+    }
+    ._admin input[type = "submit"]{
+      border : 0;
+      background : none;
+      display : block;
+      margin: 20px auto;
+      text-align : center;
+      border : 2px solid #3498db;
+      border-radius : 24px;
+      padding : 14px 20px;
+      outline : none;
+      color : white;
+      transition : 0.25s;
+      cursor: pointer;
+      font-size : 15;
+    }
+    ._admin input[type = "submit"]:hover{
+      border : 2px solid #27da63;
+      background : #27da63;
+      font-size : 17;
+    }
+
+    ._user{
+      width : 300px;
+      padding : 30px;
+      position : absolute;
+
+      top : 50%;
+      left : 50%;
+
+      transform: translate(20%, -40%);
+      text-align: center;
+      background: #303536;
+
+      border : 2px solid #3498db;
+      border-radius : 24px;
+    }
+
+    ._user:hover{
+      /*border-color : #9000ff;*/
+      border : 4px solid #27da63;
+    }
+
+    ._user h1{
+      color : white;
+      font-weight : 400;
+      text-transform: uppercase;
+    }
+
+    ._user h3{
+      color : white;
+      font-weight : 400;
+      text-transform: uppercase;
+    }
+
+    ._user input[type = "text"], ._user input[type = "password"]{
+      border : 0;
+      background : none;
+      display : block;
+      margin : 20px auto;
+      text-align : center;
+      color : white;
+      border : 2px solid #3498db;
+      padding : 14px 10px;
+      width : 200px;
+      outline : none;
+      border-radius : 24px;
+      transition : 0.25s;
+    }
+
+    ._user input[type = "text"]:focus, ._user input[type = "password"]:focus{
+      width : 220px;
+      border-color : #27da63;
+    }
+    ._user input[type = "submit"]{
+      border : 0;
+      background : none;
+      display : block;
+      margin: 20px auto;
+      text-align : center;
+      border : 2px solid #3498db;
+      border-radius : 24px;
+      padding : 14px 20px;
+      outline : none;
+      color : white;
+      transition : 0.25s;
+      cursor: pointer;
+      font-size : 15;
+    }
+    ._user input[type = "submit"]:hover{
+      border : 2px solid #27da63;
+      background : #27da63;
+      font-size : 17;
+    }
+
+    @keyframes logo{
+        0% {color : #7edd6a; padding : 54px 20px;}
+      5% {color : #99beee; padding : 54px 30px;}
+      10% {color : #7edd6a; padding : 54px 20px;}
+      20% {color : #99beee; padding : 54px 30px;}
+      30% {color : #7edd6a; padding : 54px 20px;}
+      40% {color : #99beee; padding : 54px 30px;}
+      50% {color : #7edd6a; padding : 54px 20px;}
+      60% {color : #99beee; padding : 54px 30px;}
+      70% {color : #7edd6a; padding : 54px 20px;}
+      80% {color : #99beee; padding : 54px 30px;}
+      90% {color : #7edd6a; padding : 54px 20px;}
+      95% {color : #99beee; padding : 54px 30px;}
+      95% {color : #7edd6a; padding : 54px 20px;}
+    }
+
+    .banner{
+      /*background-color : #030536;*/
+      width : 300px;
+      padding : 40px;
+      color : #99beee;
+      display : block;
+      margin : 20px auto;
+      text-align : center;
+      padding : 54px 20px;
+      font-weight : 400;
+      font-size : 50;
+      text-shadow: 0 0 3px #013f09, 0 0 5px #056279;
+    }
+
+    .banner:hover{
+      /*border : 2px solid #ffbf00;
+      border-radius : 24px;*/
+      animation-name: logo;
+      animation-duration: 10s;
+    }
+
+    </style>
+    <meta charset="utf-8">
+    <title>Example 2</title>
+  </head>
+  <body>
+
+    <h1 class="banner">
+      <u>VSE Council</u>
+    </h1>
+
+    <form class="_admin" action="trig1" method="post">
+      <h1>Login</h1>
+      <h3>(admin)</h3>
+      <input type="text" name="eMail" placeholder="username"/>
+      <input type="password" name="pswd" placeholder="password"/>
+      <input type="submit" name="lets go!" value="Let's go!"/>
+    </form>
+
+    <form class="_user" action="trig1" method="post">
+        <h1>Login</h1>
+        <h3>(user)</h3>
+        <input type="text" name="eMail" placeholder="username"/>
+        <input type="password" name="pswd" placeholder="password"/>
+        <input type="submit" name="lets go!" value="Let's go!"/>
+    </form>
+
+  </body>
+</html>
