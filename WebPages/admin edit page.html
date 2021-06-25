@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <head>
+        <title>Admin Edit Page</title>
+
+        <style>
+            table {
+                padding:5px;
+                border:3px solid black;
+                margin:10px;
+                width:25%;
+                border-radius: 15px;
+                box-shadow:5px 10px #628012;
+            }
+            tr {
+                padding: 10px;
+                border:1px solid black;
+                margin:10px;
+                text-align:center;
+                vertical-align:middle;
+                opacity:0.6;
+                transition-duration: 0.2s;
+            }
+            #name {
+                padding: 10px;
+                border:1px solid black;
+                text-align:center;
+                vertical-align:middle;
+                border-radius:15px 0 0 15px;
+            }
+            #button {
+                padding: 10px;
+                border:1px solid black;
+                text-align:center;
+                vertical-align:middle;
+                border-radius:0 15px 15px 0;
+            }
+            tr:hover {
+                padding: 10px;
+                border:1px solid black;
+                text-align:center;
+                vertical-align:middle;
+                opacity:1;
+                background-color: #80a51b;
+            }
+            h2 {
+                text-indent:10px;
+                text-shadow: 2px 2px 1px #80a51b;
+            }
+            h1 {
+                text-shadow: 2px 2px 1px #80a51b;
+            }
+            * {
+                text-transform: capitalize;
+                word-spacing:4px;
+            }
+            img {
+                border-radius:50%;
+                border:5px solid #42570b;
+            }
+        </style>
+    </head>
+    <body bgcolor='#99b354' text='white'>
+        <center>
+            <a href="https://www.vydehischool.com/" target='_blank'><img src="logo.png" align='center' id='logo' ></a>
+        </center>
+        <center>
+            <h1><u>Admin Edit Page</u></h1>
+            <h2 style='float:right;'>UserName:</h2>
+            <br>
+        </center>
+        <div ng-app='myApp' ng-controller='myCtrl'>
+            <table>
+                <h2><u>Headboy Candidates</u></h2>
+                <tr ng-repeat='x in headboy_candidates'>
+                    <td id="name">{{x.name}}</td>
+                    <td id="button"><button>Edit</button></td>
+                </tr>
+            </table>
+            <table>
+                <h2><u>Headgirl Candidates</u></h2>
+                <tr ng-repeat='x in headgirl_candidates'>
+                    <td id="name">{{x.name}}</td>
+                    <td id="button"><button>Edit</button></td>
+                </tr>
+            </table>
+            <table>
+                <h2><u>Cultural Candidates</u></h2>
+                <tr ng-repeat='x in cultural_candidates'>
+                    <td id="name">{{x.name}}</td>
+                    <td id="button"><button>Edit</button></td>
+                </tr>
+            </table>
+            <table>
+                <h2><u>Joint Candidates</u></h2>
+                <tr ng-repeat='x in joint_candidates'>
+                    <td id="name">{{x.name}}</td>
+                    <td id="button"><button>Edit</button></td>
+                </tr>
+            </table>
+            <table>
+                <h2><u>Sports Candidates</u></h2>
+                <tr ng-repeat='x in sports_candidates'>
+                    <td id="name">{{x.name}}</td>
+                    <td id="button"><button>Edit</button></td>
+                </tr>
+            </table>
+            <table>
+                <h2><u>Sports VC Candidates</u></h2>
+                <tr ng-repeat='x in sportsvc_candidates'>
+                    <td id="name">{{x.name}}</td>
+                    <td id="button"><button>Edit</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <script src='angular_scripts.js'></script>
+    </body>
+</html>

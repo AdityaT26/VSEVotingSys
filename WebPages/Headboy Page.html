@@ -5,54 +5,79 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
         <style>
+            table {
+                margin:auto;
+            }
             #photos {
-                margin: 50px;
-                border: 10px solid white;
-                aspect-ratio: 1 / 1;
-                display:inline;
+                height:200px;
+                width:200px;
+                border: 7px solid #42570b;
+                border-radius: 50%;
             }
-            #photo-div {
-                display: flex;
-                align-items: center;
-            }
-            p {
+            #can_name {
                 font-size:xx-large;
-                padding-right: 200px;
+                padding:7px;
+                margin: 0 100px;
+                border: 5px solid #42570b;
+                background-color:#80a51b;
+                border-radius:20px;
             }
-            * {
-                text-transform: capitalize;
-                word-spacing:4px;
+            #can_class {
+                font-size:xx-large;
+                margin: 0 100px;
+                padding: 7px;
+                border: 5px solid #42570b;
+                background-color:#80a51b;
+                border-radius:20px;
             }
-            li {
-                display: inline;
+            p, h1, h2 {
+                text-shadow: 2px 2px 1px #80a51b;
             }
-            #mainheaders {
+            #logo {
+                border-radius:50%;
+                border:5px solid #42570b;
+            }
+            #vote_button {
+                height:90px;
+                width:200px;
+                border: 5px solid #42570b;
+                border-radius:10px;
+                background-color:#80a51b;
                 color:white;
-                font-family:Helvetica;
+                font-size:20px;
+                padding:20px;
+                margin:50px;
+                transition-duration: 0.1s;
             }
-            
+            #vote_button:hover {
+                height:90px;
+                width:200px;
+                border: 5px solid #42570b;
+                background-color:#90c404;
+                color:white;
+                font-size:20px;
+                margin:50px;
+                box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.2);
+            }
         </style>
     </head>
-    <body bgcolor='#99b354'>
+    <body bgcolor='#99b354' text='white'>
         <center>
-            <a href="https://www.vydehischool.com/" target='_blank'><img src="logo.png" align='center' id='logo' ></a>
+            <a href="https://www.vydehischool.com/" target='_blank'><img src="logo.png" id='logo'></a>
         </center>
-
-        <h1 align='center' id='mainheaders'><u>HeadBoy Candidates</u></h1>
-        <h2 align='center' id='mainheaders'>Please select <u>ONE</u> of the candidates listed below for the post of <u>HEADBOY</u> </h2>
-        
-        
-        <div ng-app='myApp' ng-controller='myCtrl'>
-            <form>
-                <div ng-repeat='x in headboy_candidates | orderBy:"name"' id='photo-div'>
-                    <img src={{x.image}} height=200px width=200px id='photos'>
-                    <p id='mainheaders'>{{x.name}}</p>
-                    <input type="button" ng-model="$parent.headboy-vote" name="headboy-vote" style='color:black;font-family: Helvetica;' value="{{'vote for '+x.name}}">
-                </div>
-            </form>
-
-            <div>
-            </div>
+        <h1 align='center'><u>HeadBoy Candidates</u></h1>
+        <h2 align='center'>Please select <u>ONE</u> of the candidates listed below for the post of <u>HEADBOY</u></h2>
+        <div ng-app='myApp' ng-controller='myCtrl' style='overflow-x: auto;'>
+            <table>
+                <form>
+                    <tr ng-repeat='can in headboy_candidates | orderBy:"name"'>
+                        <td><img src={{can.image}} alt={{can.name}} id='photos'></td>
+                        <td><p align='center' id='can_name'>{{can.name}}</p></td>
+                        <td><p align='center' id='can_class'>{{can.class}}</p></td>
+                        <td><button id='vote_button'>Vote for {{can.name}} [{{can.code}}]</button></td>
+                    </tr>
+                </form>
+            </table>
         </div>
         <script src="angular_scripts.js"></script>
     </body>
