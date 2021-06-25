@@ -42,8 +42,8 @@
             <form>
                 <div ng-repeat='x in headboy_candidates | orderBy:"name"' id='photo-div'>
                     <img src={{x.image}} height=200px width=200px id='photos'>
-                    <p>{{x.name}}</p>
-                    <input type="button" ng-model="$parent.headboy-vote" name="headboy-vote" value="{{'vote for '+x.name}}">
+                    <p style='color:white;font-family: Helvetica;'>{{x.name}}</p>
+                    <input type="button" ng-model="$parent.headboy-vote" name="headboy-vote" style='color:black;font-family: Helvetica;' value="{{'vote for '+x.name}}">
                 </div>
             </form>
 
