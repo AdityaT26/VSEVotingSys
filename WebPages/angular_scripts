@@ -1,0 +1,9 @@
+angular.module('myApp', []).controller('myCtrl', function($scope) {
+                $scope.headboy_candidates = [
+                    {name:"George",image:"image 1.jpeg"},
+                    {name:"Sapnap",image:"image 2.jpeg"},
+                    {name:"Dream",image:"image 3.jpeg"},
+                    {name:"TommyInnit",image:"image 4.jpeg"},
+                    {name:"Techno",image:"image 5.jpeg"},
+                ];
+            });

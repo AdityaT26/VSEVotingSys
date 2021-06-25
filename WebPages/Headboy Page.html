@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Candidates Page [HeadBoy]</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+        <style>
+            #photos {
+                margin: 50px;
+                border: 10px solid black;
+                aspect-ratio: 1 / 1;
+                display:inline;
+            }
+            #photo-div {
+                display: flex;
+                align-items: center;
+            }
+            p {
+                font-size:xx-large;
+                padding-right: 200px;
+            }
+            * {
+                text-transform: capitalize;
+                word-spacing:4px;
+            }
+            li {
+                display: inline;
+            }
+            
+        </style>
+    </head>
+    <body bgcolor='#17b066'>
+        <center>
+            <a href="https://www.vydehischool.com/" target='_blank'><img src="logo.png" align='center' id='logo' ></a>
+        </center>
+
+        <h1 align='center'><u>HeadBoy Candidates</u></h1>
+        <h2 align='center'>Please select <u>ONE</u> of the candidates listed below for the post of <u>HEADBOY</u> </h2>
+        
+        
+        <div ng-app='myApp' ng-controller='myCtrl'>
+            <form>
+                <div ng-repeat='x in headboy_candidates | orderBy:"name"' id='photo-div'>
+                    <img src={{x.image}} height=200px width=200px id='photos'>
+                    <p>{{x.name}}</p>
+                    <input type="button" ng-model="$parent.headboy-vote" name="headboy-vote" value="{{'vote for '+x.name}}">
+                </div>
+            </form>
+
+            <div>
+            </div>
+        </div>
+        <script src="angular_scripts"></script>
+    </body>
+</html>
