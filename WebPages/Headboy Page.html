@@ -26,6 +26,10 @@
             li {
                 display: inline;
             }
+            #mainheaders {
+                color:white;
+                font-family:Helvetica;
+            }
             
         </style>
     </head>
@@ -34,15 +38,15 @@
             <a href="https://www.vydehischool.com/" target='_blank'><img src="logo.png" align='center' id='logo' ></a>
         </center>
 
-        <h1 align='center', style='color:white;font-family: Helvetica;'><u>HeadBoy Candidates</u></h1>
-        <h2 align='center', style='color:white;font-family: Helvetica;'>Please select <u>ONE</u> of the candidates listed below for the post of <u>HEADBOY</u> </h2>
+        <h1 align='center' id='mainheaders'><u>HeadBoy Candidates</u></h1>
+        <h2 align='center' id='mainheaders'>Please select <u>ONE</u> of the candidates listed below for the post of <u>HEADBOY</u> </h2>
         
         
         <div ng-app='myApp' ng-controller='myCtrl'>
             <form>
                 <div ng-repeat='x in headboy_candidates | orderBy:"name"' id='photo-div'>
                     <img src={{x.image}} height=200px width=200px id='photos'>
-                    <p style='color:white;font-family: Helvetica;'>{{x.name}}</p>
+                    <p id='mainheaders'>{{x.name}}</p>
                     <input type="button" ng-model="$parent.headboy-vote" name="headboy-vote" style='color:black;font-family: Helvetica;' value="{{'vote for '+x.name}}">
                 </div>
             </form>
@@ -50,6 +54,6 @@
             <div>
             </div>
         </div>
-        <script src="angular_scripts"></script>
+        <script src="angular_scripts.js"></script>
     </body>
 </html>
